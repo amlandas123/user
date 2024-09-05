@@ -5,6 +5,9 @@ pipeline{
     stages{
         stage("Lintchecks"){
             steps{
+                 script {
+                    sample.info("user")
+                }
                 sh "whoami"
                 sh "echo *** Lint check starting ***"
                 sh "npm i jslint"
